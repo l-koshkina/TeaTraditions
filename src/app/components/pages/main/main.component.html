@@ -1,0 +1,73 @@
+<div class="container">
+
+  <h1 class="opacity-0 visually-hidden">Чайная лавка</h1>
+  <div class="slider mb-5">
+    <div class="slide first-slide p-lg-5 p-3">
+      <div class="py-md-5 py-0 px-lg-0 px-sm-5 px-0">
+        <div class="py-md-5 py-0">
+          <div class="p-lg-5 p-2 d-flex flex-column align-items-start justify-content-center w-75 ">
+            <h2 class="card-title mb-lg-5 mb-1 text-start fs-1 fw-bold mt-3">Скидки на травяные чаи</h2>
+            <p class="card-text fs-6 mb-1">Узнай все подробности, заполнив заявку</p>
+<!--            <a href="#" class="slide-btn btn btn-primary mt-lg-3 mt-1 px-5 mb-3">Заполнить</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="questions my-4">
+    <h2 class="my-5 h3 text-center">Ответы на часто задаваемые вопросы</h2>
+
+    <div id="accordion" class="my-0 mx-auto col-lg-7">
+      <h3 class="fw-bold h4 text-white">Собираете ли вы подарочные боксы?</h3>
+      <div>
+        <p>
+          Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!
+        </p>
+      </div>
+      <h3 class="fw-bold h4 text-white">Сколько у вас разновидностей чая?</h3>
+      <div>
+        <p>
+          На данный момент 6 видов чая, но ассортимент регулярно обновляется и пополняется.
+        </p>
+      </div>
+      <h3 class="fw-bold h4 text-white">В какой срок осуществляется доставка?</h3>
+      <div>
+        <p>
+          Доставка осуществляется в течение двух дней.
+        </p>
+      </div>
+      <h3 class="fw-bold h4 text-white">У вас обновляется ассортимент?</h3>
+      <div>
+        <p>
+          Ассортимент обновляется каждый месяц.
+        </p>
+      </div>
+      <h3 class="fw-bold h4 text-white">Какого объема у вас пачки чая?</h3>
+      <div>
+        <p>
+          Пачки чая представлены в трех объемах:
+        </p>
+        <ul>
+          <li>
+            маленький - 50 грамм;
+          </li>
+          <li>
+            средний - 100 грамм;
+          </li>
+          <li>
+            большой - 200 грамм.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-overlay" *ngIf="showPopup" (click)="hidePopup()">
+    <div class="popup text-center bg-light rounded-4">
+      <div class="close-popup fs-2 fw-bold text-end" (click)="hidePopup()">&times;</div>
+      <div class="popup-text fs-2">Посмотрите наши чайные коллекции</div>
+      <a [routerLink]="'/products'" class="slide-btn btn btn-primary mt-lg-3 mt-3 px-5 mb-2">Смотреть</a>
+    </div>
+  </div>
+</div>
