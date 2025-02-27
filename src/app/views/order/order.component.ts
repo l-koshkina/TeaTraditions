@@ -1,13 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
-import {CommonModule, NgIf} from '@angular/common';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {HttpService} from '../../shared/services/http.service';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'order-component',
-  // imports: [FormsModule, ReactiveFormsModule, CommonModule, NgIf, HttpClientModule],
   templateUrl: './order.component.html',
   styleUrl: './order.component.scss',
   providers: [HttpService, HttpClient],

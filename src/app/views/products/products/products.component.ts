@@ -1,17 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../../shared/services/http.service';
 import {ProductType} from '../../../../types/ProductType';
-import {Router, RouterLink} from '@angular/router';
-import {HttpClientModule} from '@angular/common/http';
-import {CommonModule, NgForOf} from '@angular/common';
-import {LineLengthPipe} from '../../../shared/pipes/line-length.pipe';
+import {Router} from '@angular/router';
 import {tap} from 'rxjs';
 import {SearchService} from '../../../shared/services/search.service';
 import {SharedModule} from '../../../shared/shared.module';
 
 @Component({
   selector: 'products-component',
-  // imports: [HttpClientModule, NgForOf, CommonModule, LineLengthPipe, RouterLink],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
   providers: [HttpService, SharedModule],

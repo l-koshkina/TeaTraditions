@@ -1,18 +1,9 @@
 import {Component} from '@angular/core';
-import {Router, RouterLink, RouterLinkActive, RouterModule} from '@angular/router';
-import {FormsModule} from '@angular/forms';
-import {SearchService} from '../../services/search.service';
-import {NgIf} from '@angular/common';
+import {Router} from '@angular/router';
+import {SearchService} from '../services/search.service';
 
 @Component({
   selector: 'header-component',
-  // imports: [
-  //   RouterLink,
-  //   RouterLinkActive,
-  //   RouterModule,
-  //   FormsModule,
-  //   NgIf
-  // ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   standalone: false

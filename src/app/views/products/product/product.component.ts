@@ -1,14 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router, RouterLink, RouterModule} from '@angular/router';
-import {LineLengthPipe} from '../../../shared/pipes/line-length.pipe';
+import {ActivatedRoute, Router} from '@angular/router';
 import {ProductType} from '../../../../types/ProductType';
 import {HttpService} from '../../../shared/services/http.service';
-import {CommonModule} from '@angular/common';
-import {HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-product',
-  // imports: [RouterLink, RouterModule, LineLengthPipe, CommonModule, HttpClientModule],
   templateUrl: './product.component.html',
   styleUrl: '',
   providers: [HttpService],

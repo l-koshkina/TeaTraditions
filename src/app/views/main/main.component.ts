@@ -1,6 +1,4 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy, TemplateRef, ViewChild} from '@angular/core';
-import {RouterLink, RouterModule} from '@angular/router';
-import {CommonModule, NgIf} from '@angular/common';
 import {delay, of, Subscription} from 'rxjs';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,7 +6,6 @@ declare var $: any;
 
 @Component({
   selector: 'main-component',
-  // imports: [RouterLink, RouterModule, CommonModule, NgIf],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
   standalone: false

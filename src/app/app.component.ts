@@ -1,11 +1,9 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
-// import * as $ from 'jquery';
+import {AfterViewInit, Component} from '@angular/core';
 
 declare var $: any;
 
 @Component({
   selector: 'app-root',
-  // imports: [AppModule, RouterOutlet, MainComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   standalone: false
