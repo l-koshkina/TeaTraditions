@@ -1,21 +1,23 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpService} from '../../../services/http.service';
-import {ProductType} from '../../../types/ProductType';
+import {HttpService} from '../../../shared/services/http.service';
+import {ProductType} from '../../../../types/ProductType';
 import {Router, RouterLink} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {CommonModule, NgForOf} from '@angular/common';
-import {LineLengthPipe} from '../../../pipes/line-length.pipe';
+import {LineLengthPipe} from '../../../shared/pipes/line-length.pipe';
 import {tap} from 'rxjs';
-import {SearchService} from '../../../services/search.service';
+import {SearchService} from '../../../shared/services/search.service';
+import {SharedModule} from '../../../shared/shared.module';
 
 @Component({
   selector: 'products-component',
-  standalone: true,
-  imports: [HttpClientModule, NgForOf, CommonModule, LineLengthPipe, RouterLink],
+  // imports: [HttpClientModule, NgForOf, CommonModule, LineLengthPipe, RouterLink],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
-  providers: [HttpService]
+  providers: [HttpService, SharedModule],
+  standalone: false,
 })
+
 export class ProductsComponent implements OnInit {
   products: ProductType[] = [];
   loading: boolean = false;

@@ -62,12 +62,15 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class="popup-overlay" *ngIf="showPopup" (click)="hidePopup()">
+
+<ng-template #popup let-modal>
+  <div class="popup-overlay" (click)="modal.dismiss('Cross click')">
     <div class="popup text-center bg-light rounded-4">
-      <div class="close-popup fs-2 fw-bold text-end" (click)="hidePopup()">&times;</div>
+      <div class="close-popup fs-2 fw-bold text-end" aria-label="Close" (click)="modal.dismiss('Cross click')">&times;</div>
       <div class="popup-text fs-2">Посмотрите наши чайные коллекции</div>
       <a [routerLink]="'/products'" class="slide-btn btn btn-primary mt-lg-3 mt-3 px-5 mb-2">Смотреть</a>
     </div>
   </div>
-</div>
+</ng-template>

@@ -2,16 +2,16 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CommonModule, NgIf} from '@angular/common';
-import {HttpService} from '../../../services/http.service';
+import {HttpService} from '../../shared/services/http.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'order-component',
-  standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, CommonModule, NgIf, HttpClientModule],
+  // imports: [FormsModule, ReactiveFormsModule, CommonModule, NgIf, HttpClientModule],
   templateUrl: './order.component.html',
   styleUrl: './order.component.scss',
-  providers: [HttpService, HttpClient]
+  providers: [HttpService, HttpClient],
+  standalone: false
 })
 export class OrderComponent implements OnInit {
   orderForm!: FormGroup;

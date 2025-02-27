@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'lineLength'
+  name: 'lineLength',
+  standalone: false
 })
 export class LineLengthPipe implements PipeTransform {
 

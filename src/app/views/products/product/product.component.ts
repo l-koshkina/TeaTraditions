@@ -1,17 +1,18 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterLink, RouterModule} from '@angular/router';
-import {LineLengthPipe} from '../../../pipes/line-length.pipe';
-import {ProductType} from '../../../types/ProductType';
-import {HttpService} from '../../../services/http.service';
+import {LineLengthPipe} from '../../../shared/pipes/line-length.pipe';
+import {ProductType} from '../../../../types/ProductType';
+import {HttpService} from '../../../shared/services/http.service';
 import {CommonModule} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-product',
-  imports: [RouterLink, RouterModule, LineLengthPipe, CommonModule, HttpClientModule],
+  // imports: [RouterLink, RouterModule, LineLengthPipe, CommonModule, HttpClientModule],
   templateUrl: './product.component.html',
   styleUrl: '',
-  providers: [HttpService]
+  providers: [HttpService],
+  standalone: false
 })
 export class ProductComponent implements OnInit {
   product: ProductType;
