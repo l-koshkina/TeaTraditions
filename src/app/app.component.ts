@@ -1,4 +1,5 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {environment} from '../environments/environment';
 
 declare var $: any;
 
@@ -10,10 +11,16 @@ declare var $: any;
 })
 
 
+export class AppComponent implements AfterViewInit, OnInit {
 
-export class AppComponent implements AfterViewInit {
+  constructor() {}
+
+  ngOnInit() {
+    console.log(environment.production);
+  }
 
   ngAfterViewInit() {
+
       $('#form').submit(function (e: JQuery.SubmitEvent) {
         e.preventDefault();
 
@@ -22,5 +29,6 @@ export class AppComponent implements AfterViewInit {
 
         return true;
       });
-  }
+    }
+
 }
