@@ -41,10 +41,7 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/jquery-ui/dist/jquery-ui.min.js"
             ],
-            "outputMode": "static",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "outputMode": "static"
           },
           "configurations": {
             "production": {
